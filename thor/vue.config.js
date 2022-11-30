@@ -1,11 +1,11 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require("@vue/cli-service");
 module.exports = defineConfig({
-    lintOnSave: false,
-    transpileDependencies: true,
-    devServer: {
-        port: 3001,
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        }
-    }
-})
+  lintOnSave: false,
+  transpileDependencies: true,
+  devServer: {
+    port: 9001,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  },
+});

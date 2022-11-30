@@ -1,26 +1,22 @@
 <template>
-    <router-view />
+  <h1 class="custom-title">我是绿色的奥丁</h1>
+  <router-view v-if="create" />
 </template>
 
-<style lang="scss">
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
+<script lang="ts">
+export default {
+  name: "App",
+};
+</script>
 
-nav {
-    padding: 30px;
+<script lang="ts" setup>
+import { toRaw, watch, ref, computed, reactive, toRefs } from "vue";
 
-    a {
-        font-weight: bold;
-        color: #2c3e50;
+const create = ref<boolean>(false);
 
-        &.router-link-exact-active {
-            color: #42b983;
-        }
-    }
-}
-</style>
+setTimeout(() => {
+  create.value = true;
+}, 1000);
+</script>
+
+<style lang="scss" scoped></style>

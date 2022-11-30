@@ -3,7 +3,7 @@ module.exports = defineConfig({
   lintOnSave: false,
   transpileDependencies: true,
   devServer: {
-    port: 3002,
+    port: 9002,
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
